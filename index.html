@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="http://www.moonyluna.com/bootstrap.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MoonyLuna: A 2022 C++ app offering free, bi-directional screen sharing. Named after 'moon' and 'luna'. Compatible with Windows & Linux.">
+    <title>MoonyLuna</title>
+    <link rel="icon" href="http://www.moonyluna.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.moonyluna.com/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 50px;
+            background-color: #000000;
+            color: white;
+        }
+        #moonyluna {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1 id="moonyluna">MoonyLuna</h1>
+<h2 id="overview">Overview</h2>
+<p>MoonyLuna is a lightweight application designed for bi-directional screen sharing between two devices, aimed at enhancing collaborative efficiency. Established in August 2022, MoonyLuna is maintained by a team of volunteers and remains free of charge. Built on C++, this graphical application communicates with a server using the HTTP protocol, without needing SSL/TLS handshakes. MoonyLuna leverages the EncFile encryption engine to exchange data between two devices through a server. Encryption and decryption occur client-side, and the server solely acts as a tunnel for point-to-point transmission, thereby ensuring personal privacy and data security.</p>
+<p>MoonyLuna associates two usernames using a User Pair model. For details on configuration, see the section below. If you wish to create your own user pair on MoonyLuna&#39;s official server, please contact <code>apply@mail.moonyluna.com</code>. Your email should include two usernames (consisting of alphanumeric characters) and a brief explanation of your background and reasoning. Emails are generally processed within five days, though a response is not guaranteed. You can verify the success of your request through the MoonyLuna client.</p>
+<h2 id="download-and-installation">Download and Installation</h2>
+<p><a href="http://www.moonyluna.com/MoonyLuna.zip">Download the MoonyLuna client directly</a>.</p>
+<p>After downloading, extract the zip file to your desired location.</p>
+<ul>
+<li><strong>Windows</strong>: Simply double-click <code>MoonyLuna.exe</code> to run the application.</li>
+<li><strong>Linux</strong>: Run <code>sudo apt-get install wine</code> in the terminal to support exe file execution, then start the program by entering <code>wine MoonyLuna.exe</code> in the terminal.</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>The <code>settings.txt</code> file is your configuration file, and modifying its contents can personalize your experience. The specific entries are as follows:</p>
+<ul>
+<li><strong><code>user</code></strong>: One of the two associated usernames.</li>
+<li><strong><code>key</code></strong>: A user-defined 48-character hexadecimal string (e.g., <code>0123456789abcdef0123456789abcdef0123456789abcdef</code>) used for encryption. Both MoonyLuna clients in a pair must share the same key.</li>
+<li><strong><code>interval</code></strong>: Time interval between server requests. Options are <code>instant</code>, <code>brief</code>, <code>moderate</code>, and <code>extended</code>.</li>
+<li><strong><code>resolution</code></strong>: Resolution of the uploaded images. Options are <code>high</code>, <code>medium</code>, and <code>low</code>.</li>
+<li>
+  <strong><code>chatcolor</code></strong>: Color of the uploaded chat text. Options include:
+  <code style="color: rgb(215, 30, 34);">red</code>,
+  <code style="color: rgb(255, 255, 103);">yellow</code>,
+  <code style="color: rgb(29, 60, 233);">blue</code>,
+  <code style="color: rgb(255, 141, 28);">orange</code>,
+  <code style="color: rgb(27, 145, 62);">green</code>,
+  <code style="color: rgb(120, 61, 210);">purple</code>,
+  <code style="color: rgb(74, 86, 94);">black</code>,
+  <code style="color: rgb(233, 247, 255);">white</code>,
+  <code style="color: rgb(131, 151, 167);">gray</code>,
+  <code style="color: rgb(255, 99, 212);">pink</code>,
+  <code style="color: rgb(128, 88, 45);">brown</code>,
+  <code style="color: rgb(68, 255, 247);">cyan</code>,
+  <code style="color: rgb(91, 254, 75);">lime</code>,
+  <code style="color: rgb(108, 43, 61);">maroon</code>,
+  <code style="color: rgb(255, 214, 236);">rose</code>,
+  <code style="color: rgb(255, 255, 190);">banana</code>,
+  <code style="color: rgb(159, 153, 137);">tan</code>,
+  and <code style="color: rgb(236, 117, 120);">coral</code>.
+</li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Adjust Window Transparency</strong>: Click left or right mouse button.</li>
+<li><strong>Resize Window</strong>: Scroll the mouse wheel up or down.</li>
+<li><strong>Hold Mode</strong>: Press <code>H</code> to toggle Hold mode, which replaces the uploaded screen image with a blank image.</li>
+<li><strong>Top Mode</strong>: Press <code>T</code> to toggle Top mode, placing the application window above other windows.</li>
+<li><strong>Chat Mode</strong>: Press <code>C</code> to enter Chat mode and <code>ESC</code> to exit. In Chat mode, you can send short messages to notify the other party.</li>
+</ul>
+<p>Enjoy using MoonyLuna for efficient and secure screen sharing!</p>
+</body>
+</html>
