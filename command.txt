@@ -1,3 +1,0 @@
-nohup python3 -m http.server 80 --directory /root/lhqing/server > /dev/null 2>&1 &
-
-kill $(ps aux | grep "python3 -m http.server 80 --directory /root/lhqing/server" | grep -v grep | awk '{print $2}')
